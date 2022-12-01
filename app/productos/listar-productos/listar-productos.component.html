@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<table>
+    <tr>
+        <th>Precio</th>
+        <th>Nombre</th>
+        <th>Categoria</th>
+        <th>Stock</th>
+    </tr>
+    <tr *ngFor="let p of products | async">
+        <td>{{p.price}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.stock}}</td>
+    </tr>
+</table>
+
+<button (click)="loadProducts()">Listar</button>
