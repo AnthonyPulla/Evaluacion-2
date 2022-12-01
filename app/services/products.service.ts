@@ -19,12 +19,6 @@ export class ProductsService {
     return this.lstProducts;
   }
 
-  addProductFire(product:Product){
-    const id = this.afs.createId();
-    product.uid=id;
-    this.productsCollection.doc(id).set(Object.assign({},product));
-  }
-
   getProductsFire(){
     return this.productsCollection.valueChanges();
   }
