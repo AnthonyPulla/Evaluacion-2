@@ -13,14 +13,10 @@ export class ListarProductosComponent {
 
   title = "LISTADO DE PRODUCTOS"
 
-  lstProducts=new Array()
   products: any
 
   constructor(private router:Router,private productService:ProductsService){}
 
-  ngOnInit(): void{
-    this.loadProducts()
-  }
 
   loadProducts(){
     // this.lstProducts=this.productService.getProducts()
